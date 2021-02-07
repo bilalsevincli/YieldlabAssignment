@@ -1,0 +1,9 @@
+de\yieldlab\recruiting\rtb\AuctionController.class
+de\yieldlab\recruiting\rtb\domain\BidRequestXO.class
+de\yieldlab\recruiting\rtb\RTB.class
+de\yieldlab\recruiting\rtb\domain\Auction$State.class
+de\yieldlab\recruiting\rtb\domain\BidResponseXO.class
+de\yieldlab\recruiting\rtb\templating\TemplatingConfiguration.class
+de\yieldlab\recruiting\rtb\domain\Auction.class
+de\yieldlab\recruiting\rtb\templating\TemplatingService.class
+de\yieldlab\recruiting\rtb\domain\Bid.class

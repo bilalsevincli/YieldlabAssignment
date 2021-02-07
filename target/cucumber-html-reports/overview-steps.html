@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>07 Feb 2021, 22:09</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyIsAsExpectedForA(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="163251350">0.163</td>
+              <td class="duration" data-value="163251350">0.567</td>
+              <td class="duration" data-value="653005400">0.653</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyIsAsExpectedForB(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="33002650">0.033</td>
+              <td class="duration" data-value="33002650">0.035</td>
+              <td class="duration" data-value="132010600">0.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyIsAsExpectedForC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="40499150">0.040</td>
+              <td class="duration" data-value="40499150">0.050</td>
+              <td class="duration" data-value="161996600">0.161</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyReturnsWinnerBid()</td>
+              <td>6</td>
+              <td class="duration" data-value="3332366">0.003</td>
+              <td class="duration" data-value="3332366">0.015</td>
+              <td class="duration" data-value="19994200">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyReturnsWinnerBidValue(java.lang.String,int)</td>
+              <td>6</td>
+              <td class="duration" data-value="667716">0.000</td>
+              <td class="duration" data-value="667716">0.001</td>
+              <td class="duration" data-value="4006300">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyReturnsWinnerBidValueValue(java.lang.String,int,java.lang.String,int)</td>
+              <td>15</td>
+              <td class="duration" data-value="667186">0.000</td>
+              <td class="duration" data-value="667186">0.001</td>
+              <td class="duration" data-value="10007800">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyReturnsWinnerBidderAsOr(java.lang.String,java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="83516">0.000</td>
+              <td class="duration" data-value="83516">0.001</td>
+              <td class="duration" data-value="1002200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyReturnsWinnerBidderAsOrOr(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyShouldReturnWinnerBidderRandomlyAsOr(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="666833">0.000</td>
+              <td class="duration" data-value="666833">0.002</td>
+              <td class="duration" data-value="2000500">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.responseBodyShouldReturnWinnerBidderRandomlyAsOrOr(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.response_body_contains(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="667266">0.000</td>
+              <td class="duration" data-value="667266">0.001</td>
+              <td class="duration" data-value="2001800">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.response_body_returns_winner_bid(java.lang.String,int,java.lang.String,int,java.lang.String,int)</td>
+              <td>17</td>
+              <td class="duration" data-value="1000370">0.001</td>
+              <td class="duration" data-value="1000370">0.009</td>
+              <td class="duration" data-value="17006300">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.userSendsGETRequestToEndpoint(java.lang.String,java.lang.String,int,java.lang.String,int)</td>
+              <td>12</td>
+              <td class="duration" data-value="33000933">0.033</td>
+              <td class="duration" data-value="33000933">0.043</td>
+              <td class="duration" data-value="396011200">0.396</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.userSendsGETRequestToEndpoint(java.lang.String,java.lang.String,int,java.lang.String,int,java.lang.String,int)</td>
+              <td>17</td>
+              <td class="duration" data-value="27056776">0.027</td>
+              <td class="duration" data-value="27056776">0.035</td>
+              <td class="duration" data-value="459965200">0.459</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.userSendsGETRequestToEndpoint(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="38165366">0.038</td>
+              <td class="duration" data-value="38165366">0.043</td>
+              <td class="duration" data-value="228992200">0.228</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_creates_a_json_body_using(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>24</td>
+              <td class="duration" data-value="125045">0.000</td>
+              <td class="duration" data-value="125045">0.001</td>
+              <td class="duration" data-value="3001100">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_gets_status_code_as(java.lang.Integer)</td>
+              <td>68</td>
+              <td class="duration" data-value="205957">0.000</td>
+              <td class="duration" data-value="205957">0.002</td>
+              <td class="duration" data-value="14005100">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_sends_get_request_to_endpoint(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="260335416">0.260</td>
+              <td class="duration" data-value="260335416">1.353</td>
+              <td class="duration" data-value="1562012500">1.562</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_sends_get_request_to_endpoint_for_random_test(java.lang.String,java.lang.String,int,java.lang.String,int)</td>
+              <td>3</td>
+              <td class="duration" data-value="1245382866">1.245</td>
+              <td class="duration" data-value="1245382866">1.293</td>
+              <td class="duration" data-value="3736148600">3.736</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_sends_get_request_to_endpoint_for_random_test(java.lang.String,java.lang.String,int,java.lang.String,int,java.lang.String,int)</td>
+              <td>3</td>
+              <td class="duration" data-value="1204665066">1.204</td>
+              <td class="duration" data-value="1204665066">1.276</td>
+              <td class="duration" data-value="3613995200">3.613</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_sends_post_request_to_bidder_port_a()</td>
+              <td>8</td>
+              <td class="duration" data-value="54625175">0.054</td>
+              <td class="duration" data-value="54625175">0.316</td>
+              <td class="duration" data-value="437001400">0.437</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_sends_post_request_to_bidder_port_b()</td>
+              <td>8</td>
+              <td class="duration" data-value="18689037">0.018</td>
+              <td class="duration" data-value="18689037">0.038</td>
+              <td class="duration" data-value="149512300">0.149</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.yieldlab.step_definitions.BidderStepDefinitions.user_sends_post_request_to_bidder_port_c()</td>
+              <td>8</td>
+              <td class="duration" data-value="18250475">0.018</td>
+              <td class="duration" data-value="18250475">0.026</td>
+              <td class="duration" data-value="146003800">0.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>23</td>
+            <td>242</td>
+            <td class="duration">0.048</td>
+            <td class="duration">3.736</td>
+            <td class="duration">11.749</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

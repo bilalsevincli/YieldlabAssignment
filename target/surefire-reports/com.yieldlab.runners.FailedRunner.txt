@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.yieldlab.runners.FailedRunner
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 7.119 s <<< FAILURE! - in com.yieldlab.runners.FailedRunner
+GET the winner and verify - 2 Same Highest Bids - 2 Query Parameters - Verify Random Selection #1(User should be able to get the winner)  Time elapsed: 1.298 s  <<< FAILURE!
+java.lang.AssertionError: Verify that bidder is chosen randomly as a or b
+
+GET the winner and verify - 2 Same Highest Bids - 2 Query Parameters - Verify Random Selection #2(User should be able to get the winner)  Time elapsed: 1.206 s  <<< FAILURE!
+java.lang.AssertionError: Verify that bidder is chosen randomly as b or c
+
+GET the winner and verify - 2 Same Highest Bids - 2 Query Parameters - Verify Random Selection #3(User should be able to get the winner)  Time elapsed: 1.172 s  <<< FAILURE!
+java.lang.AssertionError: Verify that bidder is chosen randomly as c or b
+
+GET the winner and verify - 3 Same Highest Bids - 3 Query Parameters - Verify Random Selection #1(User should be able to get the winner)  Time elapsed: 1.097 s  <<< FAILURE!
+java.lang.AssertionError: Verify that bidder is chosen randomly as a or b or c
+
+GET the winner and verify - 3 Same Highest Bids - 3 Query Parameters - Verify Random Selection #2(User should be able to get the winner)  Time elapsed: 1.13 s  <<< FAILURE!
+java.lang.AssertionError: Verify that bidder is chosen randomly as b or c or a
+
+GET the winner and verify - 3 Same Highest Bids - 3 Query Parameters - Verify Random Selection #3(User should be able to get the winner)  Time elapsed: 1.108 s  <<< FAILURE!
+java.lang.AssertionError: Verify that bidder is chosen randomly as c or a or b
+
+GET request returns 'No valid bids' if there are no valid bids #1(User should be able to get the winner)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: Verify that response body contains 'No valid bids' message
+
+GET request returns 'No valid bids' if there are no valid bids #2(User should be able to get the winner)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: Verify that response body contains 'No valid bids' message
+
+GET request returns 'No valid bids' if there are no valid bids #3(User should be able to get the winner)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: Verify that response body contains 'No valid bids' message
+
