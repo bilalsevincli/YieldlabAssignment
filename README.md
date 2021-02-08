@@ -51,6 +51,24 @@ Design of the framework is Cucumber Behavior Driven Development framework.
 
 You can run the application based on the instructions that provided in the assignment readme file.
 
+- **Start the Docker containers**
+
+  To start the test environment, either use the script `test-setup.sh` or run the
+  following commands one after the other from your shell:
+  
+    ```sh
+    docker run --rm -e server.port=8081 -e biddingTrigger=a -e initial=150 -p 8081:8081 yieldlab/recruiting-test-bidder &
+    docker run --rm -e server.port=8082 -e biddingTrigger=b -e initial=250 -p 8082:8082 yieldlab/recruiting-test-bidder &
+    docker run --rm -e server.port=8083 -e biddingTrigger=c -e initial=500 -p 8083:8083 yieldlab/recruiting-test-bidder &
+    ```
+  
+- **Start the application**
+
+    You can run the application from your shell via:
+    ```sh
+    mvn spring-boot:run
+    ```
+  
 **Run the test suite**
 
 Run the test suite via Maven verify. You can run the application from your shell via:
